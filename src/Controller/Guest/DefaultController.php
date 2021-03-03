@@ -3,20 +3,17 @@
 namespace App\Controller\Guest;
 
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends AbstractController
+class DefaultController extends UniversalController
 {
     /**
      * @Route("/", name="index")
      */
     public function index()
     {
-
-        return $this->render('guest/guestindex.html.twig', [
-            'title' => 'Главная страница',
-            ]
-        );
+        $forRender = parent::renderDefault();
+        return $this->render('guest/guestindex.html.twig', $forRender);
     }
 }
