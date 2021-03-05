@@ -1,0 +1,550 @@
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/case1.iml\" filepath=\"$PROJECT_DIR$/.idea/case1.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 670699c5fe84effa184e889bcafdc009f42c4804)
++++ .idea/modules.xml	(date 1614896320628)
+@@ -2,7 +2,9 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/case1.iml" filepath="$PROJECT_DIR$/.idea/case1.iml" />
++      <module fileurl="file://$PROJECT_DIR$/../blog/.idea/blog-original.iml" filepath="$PROJECT_DIR$/../blog/.idea/blog-original.iml" />
++      <module fileurl="file://$PROJECT_DIR$/../case2/.idea/case1.iml" filepath="$PROJECT_DIR$/../case2/.idea/case1.iml" />
++      <module fileurl="file://$PROJECT_DIR$/../../openserver/OpenServer/domains/project/.idea/project.iml" filepath="$PROJECT_DIR$/../../openserver/OpenServer/domains/project/.idea/project.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1614900114726)
++++ .idea/vcs.xml	(date 1614900114726)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$/../case2" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: config/packages/security.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>security:\r\n    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers\r\n    providers:\r\n        users_in_memory: { memory: null }\r\n    firewalls:\r\n        dev:\r\n            pattern: ^/(_(profiler|wdt)|css|images|js)/\r\n            security: false\r\n        main:\r\n            anonymous: true\r\n            lazy: true\r\n            provider: users_in_memory\r\n\r\n            # activate different ways to authenticate\r\n            # https://symfony.com/doc/current/security.html#firewalls-authentication\r\n\r\n            # https://symfony.com/doc/current/security/impersonating_user.html\r\n            # switch_user: true\r\n\r\n    # Easy way to control access for large sections of your site\r\n    # Note: Only the *first* access control that matches will be used\r\n    access_control:\r\n        # - { path: ^/admin, roles: ROLE_ADMIN }\r\n        # - { path: ^/profile, roles: ROLE_USER }\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config/packages/security.yaml	(revision 670699c5fe84effa184e889bcafdc009f42c4804)
++++ config/packages/security.yaml	(date 1614894066764)
+@@ -1,15 +1,23 @@
+ security:
++    encoders:
++        App\Entity\User:
++            algorithm: auto
++
+     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+     providers:
+-        users_in_memory: { memory: null }
+-    firewalls:
++        app_user_provider:
++            entity:
++                class: App\Entity\User
++                property: email
++
++        firewalls:
+         dev:
+             pattern: ^/(_(profiler|wdt)|css|images|js)/
+             security: false
+         main:
+-            anonymous: true
++            #anonymous: true
+             lazy: true
+-            provider: users_in_memory
++            #provider: users_in_memory
+ 
+             # activate different ways to authenticate
+             # https://symfony.com/doc/current/security.html#firewalls-authentication
+Index: src/Controller/Admin/AdminHomeController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\n\r\nnamespace App\\Controller\\Admin;\r\n\r\n\r\nuse App\\Controller\\Guest\\UniversalController;\r\nuse Symfony\\Component\\Routing\\Annotation\\Route;\r\n\r\n\r\nclass AdminHomeController extends AdminBaseController\r\n{\r\n    /**\r\n     * @Route(\"/admin\", name=\"admin_home\")\r\n     *\r\n     */\r\n    public function index()\r\n    {\r\n        $forRender = parent::renderDefault();\r\n        return $this->render('admin/adminindex.html.twig', $forRender);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Controller/Admin/AdminHomeController.php	(revision 670699c5fe84effa184e889bcafdc009f42c4804)
++++ src/Controller/Admin/AdminHomeController.php	(date 1614894227619)
+@@ -4,7 +4,7 @@
+ namespace App\Controller\Admin;
+ 
+ 
+-use App\Controller\Guest\UniversalController;
++use App\Controller\Guest;
+ use Symfony\Component\Routing\Annotation\Route;
+ 
+ 
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(date 1614893589958)
++++ .idea/dataSources.xml	(date 1614893589958)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="test@localhost" uuid="f5ccca02-b0f5-4ce4-92d2-1a792f632d9d">
++      <driver-ref>mysql.8</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
++      <jdbc-url>jdbc:mysql://localhost:3306/test</jdbc-url>
++      <driver-properties>
++        <property name="serverTimezone" value="UTC" />
++      </driver-properties>
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/php.xml	(date 1614892571340)
++++ .idea/php.xml	(date 1614892571340)
+@@ -0,0 +1,108 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="PhpIncludePathManager">
++    <include_path>
++      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
++      <path value="$PROJECT_DIR$/vendor/composer" />
++      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
++      <path value="$PROJECT_DIR$/vendor/psr/container" />
++      <path value="$PROJECT_DIR$/vendor/psr/link" />
++      <path value="$PROJECT_DIR$/vendor/psr/log" />
++      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/psr/cache" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
++      <path value="$PROJECT_DIR$/vendor/twig/twig" />
++      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
++      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
++      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
++      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
++      <path value="$PROJECT_DIR$/vendor/symfony/form" />
++      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
++      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
++      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
++      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
++      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
++      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
++      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
++      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
++      <path value="$PROJECT_DIR$/vendor/symfony/process" />
++      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/console" />
++      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
++      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
++      <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
++      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
++      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
++      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
++      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
++      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
++      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
++      <path value="$PROJECT_DIR$/vendor/symfony/config" />
++      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
++      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
++      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/string" />
++      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
++      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
++      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
++      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
++      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
++      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
++      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
++      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
++      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
++      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
++      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
++    </include_path>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 670699c5fe84effa184e889bcafdc009f42c4804)
++++ .idea/workspace.xml	(date 1614907402798)
+@@ -1,6 +1,268 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </select>
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="2596ff80-bfd5-4910-b8e1-ab302936cf34" name="Default Changelist" comment="Create Entity User.php&#10;Create DB test&#10;make:migration&#10;doctrine:migrations:migrate&#10;make:auth [1](check namespace)&#10;SecurityController move to App\Security&#10;new Class SupremeAdminController.php - render all users">
++      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/migrations/Version20210304213210.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
+   <component name="ComposerSettings">
+     <execution />
+   </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$/../case2" value="master" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../case2" />
++    <option name="RESET_MODE" value="HARD" />
++  </component>
++  <component name="PhpWorkspaceProjectConfiguration">
++    <include_path>
++      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
++      <path value="$PROJECT_DIR$/vendor/composer" />
++      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
++      <path value="$PROJECT_DIR$/vendor/psr/container" />
++      <path value="$PROJECT_DIR$/vendor/psr/link" />
++      <path value="$PROJECT_DIR$/vendor/psr/log" />
++      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/psr/cache" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
++      <path value="$PROJECT_DIR$/vendor/twig/twig" />
++      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
++      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
++      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
++      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
++      <path value="$PROJECT_DIR$/vendor/symfony/form" />
++      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
++      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
++      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
++      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
++      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
++      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
++      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
++      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
++      <path value="$PROJECT_DIR$/vendor/symfony/process" />
++      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/console" />
++      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
++      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
++      <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
++      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
++      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
++      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
++      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
++      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
++      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
++      <path value="$PROJECT_DIR$/vendor/symfony/config" />
++      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
++      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
++      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/string" />
++      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
++      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
++      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
++      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
++      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
++      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
++      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
++      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
++      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
++      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
++      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
++      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
++      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
++      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
++    </include_path>
++  </component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
++    <property name="DatabaseDriversLRU" value="mysql" />
++    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../case2" />
++  </component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\PHP\case2\src\Controller\Security" />
++      <recent name="C:\PHP\case2\src\Repository" />
++    </key>
++  </component>
++  <component name="SvnConfiguration">
++    <configuration />
++  </component>
++  <component name="TaskManager">
++    <task id="LOCAL-00001" summary="Create Entity User.php&#10;Create DB test&#10;make:migration&#10;doctrine:migrations:migrate&#10;make:auth [1](check namespace)&#10;SecurityController move to App\Security&#10;new Class SupremeAdminController.php - render all users">
++      <created>1614900323064</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1614900323064</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="master" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++    <MESSAGE value="Create Entity User.php&#10;Create DB test&#10;make:migration&#10;doctrine:migrations:migrate&#10;make:auth [1](check namespace)&#10;SecurityController move to App\Security&#10;new Class SupremeAdminController.php - render all users" />
++    <option name="LAST_COMMIT_MESSAGE" value="Create Entity User.php&#10;Create DB test&#10;make:migration&#10;doctrine:migrations:migrate&#10;make:auth [1](check namespace)&#10;SecurityController move to App\Security&#10;new Class SupremeAdminController.php - render all users" />
++  </component>
++  <component name="WindowStateProjectService">
++    <state x="-1368" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614893589304">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1368" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614893589304" />
++    <state x="-1167" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1614905246032">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1167" y="255" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614905246032" />
++    <state x="-1124" y="325" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614896519021">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1124" y="325" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614896519021" />
++    <state x="-1230" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614894473593">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1230" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614894473593" />
++    <state x="-1736" y="89" width="1536" height="864" key="DiffContextDialog" timestamp="1614907402789">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1736" y="89" width="1536" height="864" key="DiffContextDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614907402789" />
++    <state x="-1181" y="281" key="FileChooserDialogImpl" timestamp="1614900105105">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1181" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614900105105" />
++    <state x="-1136" y="440" key="Github.CreateGistDialog" timestamp="1614899933794">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1136" y="440" key="Github.CreateGistDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614899933794" />
++    <state x="-1124" y="418" key="Github.ShareDialog" timestamp="1614893236842">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1124" y="418" key="Github.ShareDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614893236842" />
++    <state x="-1147" y="262" key="NewPhpClassDialog" timestamp="1614896485517">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1147" y="262" key="NewPhpClassDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614896485517" />
++    <state x="-1088" y="259" key="RollbackChangesDialog" timestamp="1614893442470">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1088" y="259" key="RollbackChangesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614893442470" />
++    <state x="-1368" y="272" key="Vcs.Push.Dialog.v2" timestamp="1614907309757">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1368" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614907309757" />
++    <state x="-1151" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614907402773">
++      <screen x="-1920" y="0" width="1920" height="1080" />
++    </state>
++    <state x="-1151" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614907402773" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: migrations/Version20210304213210.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- migrations/Version20210304213210.php	(date 1614893531250)
++++ migrations/Version20210304213210.php	(date 1614893531250)
+@@ -0,0 +1,31 @@
++<?php
++
++declare(strict_types=1);
++
++namespace DoctrineMigrations;
++
++use Doctrine\DBAL\Schema\Schema;
++use Doctrine\Migrations\AbstractMigration;
++
++/**
++ * Auto-generated Migration: Please modify to your needs!
++ */
++final class Version20210304213210 extends AbstractMigration
++{
++    public function getDescription() : string
++    {
++        return '';
++    }
++
++    public function up(Schema $schema) : void
++    {
++        // this up() migration is auto-generated, please modify it to your needs
++        $this->addSql('CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, email VARCHAR(180) NOT NULL, roles JSON NOT NULL, password VARCHAR(255) NOT NULL, UNIQUE INDEX UNIQ_8D93D649E7927C74 (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
++    }
++
++    public function down(Schema $schema) : void
++    {
++        // this down() migration is auto-generated, please modify it to your needs
++        $this->addSql('DROP TABLE user');
++    }
++}
