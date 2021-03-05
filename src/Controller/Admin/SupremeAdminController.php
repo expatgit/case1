@@ -44,7 +44,7 @@ class SupremeAdminController extends AdminBaseController
         if(($form->isSubmitted()) && ($form->isValid())) // проверка формы - на нажатие кнопки + на валидацию формы
         {
             $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
-            $user->$setPassword($password);
+            $user->setPassword($password);
             $user->setRoles(["ROLE_ADMIN"]);
             $em->persist($user);
             $em->flush();
