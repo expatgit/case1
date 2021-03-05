@@ -25,16 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7641cea-e90a-401a-a08b-074165c29a78" name="Default Changelist" comment="xx">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/SupremeAdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/case1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/case1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e7641cea-e90a-401a-a08b-074165c29a78" name="Default Changelist" comment="created Supreme controller + twig">
+      <change afterPath="$PROJECT_DIR$/templates/admin/user/form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SupremeAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SupremeAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,8 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../blog" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -180,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614936849993</updated>
-      <workItem from="1614936877948" duration="5780000" />
+      <workItem from="1614936877948" duration="12327000" />
     </task>
     <task id="LOCAL-00001" summary="xx">
       <created>1614942279278</created>
@@ -189,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614942279278</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created Supreme controller + twig">
+      <created>1614956739020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614956739020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +224,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xx" />
-    <option name="LAST_COMMIT_MESSAGE" value="xx" />
+    <MESSAGE value="created Supreme controller + twig" />
+    <option name="LAST_COMMIT_MESSAGE" value="created Supreme controller + twig" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1150" y="431" key="#Composer" timestamp="1614936910840">
@@ -236,6 +240,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1368" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614937206776" />
+    <state x="-1167" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1614957935181">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1167" y="255" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614957935181" />
     <state x="-1335" y="126" key="CommitChangelistDialog2" timestamp="1614941998991">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
