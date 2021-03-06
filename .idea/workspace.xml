@@ -25,18 +25,80 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7641cea-e90a-401a-a08b-074165c29a78" name="Default Changelist" comment="security.yaml*2">
+    <list default="true" id="e7641cea-e90a-401a-a08b-074165c29a78" name="Default Changelist" comment="Admin created. DB updated">
+      <change afterPath="$PROJECT_DIR$/../blog/.idea/blog-original.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_3_6_21__12_09_AM_a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/framework/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/1/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/case1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/case1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SupremeAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SupremeAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/common/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/base/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guest/guestindex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guest/guestindex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guest/guestorigin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guest/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/HTML_CS.iml" beforeDir="false" afterPath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/HTML_CS.iml" afterDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/modules.xml" beforeDir="false" afterPath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM_[Default_Changelist]/avatar.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM_[Default_Changelist]/slide1.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM_[Default_Changelist]/slide2.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM_[Default_Changelist]/slide3.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/vcs.xml" beforeDir="false" afterPath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -164,8 +226,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/Homework1-2" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\PHP\case1\public\assets" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="a make:controller" />
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\1\AppData\Roaming\Subversion</configuration>
@@ -177,7 +250,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614936849993</updated>
-      <workItem from="1614936877948" duration="16519000" />
+      <workItem from="1614936877948" duration="32801000" />
+      <workItem from="1615037498060" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="xx">
       <created>1614942279278</created>
@@ -207,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614963550994</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Admin created. DB updated">
+      <created>1614970513858</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614970513858</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +324,8 @@
     <MESSAGE value="created Supreme controller + twig" />
     <MESSAGE value="security.yaml" />
     <MESSAGE value="security.yaml*2" />
-    <option name="LAST_COMMIT_MESSAGE" value="security.yaml*2" />
+    <MESSAGE value="Admin created. DB updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin created. DB updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1150" y="431" key="#Composer" timestamp="1614936910840">
@@ -266,10 +348,14 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1335" y="126" key="CommitChangelistDialog2/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614941998991" />
-    <state x="-1181" y="281" key="FileChooserDialogImpl" timestamp="1614941989956">
+    <state x="-1183" y="451" key="ComposerInitDialogKey" timestamp="1614982471197">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1181" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614941989956" />
+    <state x="-1183" y="451" key="ComposerInitDialogKey/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982471197" />
+    <state x="-1181" y="281" key="FileChooserDialogImpl" timestamp="1614992142801">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1181" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614992142801" />
     <state x="-1100" y="450" key="Github.Dialog.Accounts.Choose" timestamp="1614942136677">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -278,22 +364,50 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1124" y="418" width="327" height="316" key="Github.ShareDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614941534782" />
+    <state width="1920" height="298" key="GridCell.Tab.0.bottom" timestamp="1614982531248">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1920" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982531248" />
+    <state width="1920" height="298" key="GridCell.Tab.0.center" timestamp="1614982531247">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1920" height="298" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982531247" />
+    <state width="1920" height="298" key="GridCell.Tab.0.left" timestamp="1614982531247">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1920" height="298" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982531247" />
+    <state width="1920" height="298" key="GridCell.Tab.0.right" timestamp="1614982531247">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1920" height="298" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982531247" />
+    <state x="-1079" y="405" width="389" height="269" key="MultipleFileMergeDialog" timestamp="1614971470153">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1079" y="405" width="389" height="269" key="MultipleFileMergeDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614971470153" />
     <state x="-1147" y="262" key="NewPhpClassDialog" timestamp="1614942503843">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1147" y="262" key="NewPhpClassDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614942503843" />
-    <state x="-1459" y="171" key="SettingsEditor" timestamp="1614941962033">
+    <state x="-1459" y="171" key="SettingsEditor" timestamp="1614982184282">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1459" y="171" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614941962033" />
-    <state x="-1368" y="272" key="Vcs.Push.Dialog.v2" timestamp="1614942313143">
+    <state x="-1459" y="171" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982184282" />
+    <state x="-1203" y="399" key="SymfonyComponentCompositeDataDialog" timestamp="1614982176798">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1368" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614942313143" />
-    <state x="-1289" y="343" width="546" height="326" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1614942301466">
+    <state x="-1203" y="399" key="SymfonyComponentCompositeDataDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982176798" />
+    <state x="-1368" y="272" key="Vcs.Push.Dialog.v2" timestamp="1614971493284">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1289" y="343" width="546" height="326" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614942301466" />
+    <state x="-1368" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614971493284" />
+    <state x="-1289" y="343" width="546" height="326" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1614971434430">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1289" y="343" width="546" height="326" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614971434430" />
+    <state x="-1304" y="245" width="672" height="677" key="run.anything.popup" timestamp="1614982562975">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1304" y="245" width="672" height="677" key="run.anything.popup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1614982562975" />
     <state x="-1130" y="330" key="svn.repositoryBrowser" timestamp="1614941566520">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
