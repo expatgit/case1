@@ -53,8 +53,8 @@
 
         <form>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ path('admin_home') }}" class="btn btn-outline-secondary" type="submit">Панель администратора</a>
-
+                <a href="{{ path('admin_home') }}" class="btn btn-outline-secondary mb-1" type="submit">Панель администратора</a>
+                <a href="{{ path('app_logout') }}" class="btn btn-outline-primary" type="submit">Выйти</a>
 
             {% else %}
                 <a href="{{ path('app_login') }}" class="btn btn-outline-primary mb-1" type="submit">Войти</a>

@@ -2,16 +2,77 @@
 {% extends 'admin/adminorigin.html.twig' %}
 
 {% block body %}
-    <h1>
-        {{ title }}
-    </h1>
-    <a href="{{ path('admin_user_create') }}">Создать пользователя</a><br>
-    <h2>Список пользователей</h2>
-    <ul>
-        {% for user in users %}
 
-        <li> {{ user.email }}, {{ user.roles | json_encode }}</li>
-        {% endfor %}
-    </ul>
+    <div class="container-xl">
+        <div class="row no-gutters">
+            <div class="col-12 text-center">
+                <h1 class="mt-5">
+                    {{ title }}  {{ app.user.username }}
+                </h1>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xl " id="main" >
+        <div class="row mt-xl-5">
+
+            <div class="col-4 text-center border-right">
+                <div class="mt-3">
+                   <h4>
+                       Меню администратора
+                   </h4>
+                </div>
+                <br><br>
+                <div>
+                    <button class="btn-outline-success" type="submit" style="border-radius: 10px">
+                        <a href="{{ path('admin_user') }}">Пользователи</a>
+                </div>
+
+            </div>
+            <div class="col-8 text-center">
+
+                <h1>
+
+                    {{ title }}
+                </h1>
+                <a href="{{ path('admin_user_create') }}">Создать пользователя</a><br>
+                <h2>Список пользователей</h2>
+                <ul>
+                    {% for user in users %}
+
+                        <li> {{ user.email }}, {{ user.roles | json_encode }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+{#
+    <div class="container-xl">
+
+        <div class="col-12">
+            <div class="row mt-5">
+
+                <div class="col-3 text-center">
+                    <div>
+                        Меню администратора
+                    </div>
+                    <div>
+
+                    <button class="btn-outline-success" type="submit" style="border-radius: 10px">
+                            <a href="{{ path('admin_user') }}">Пользователи</a>
+                        </button>
+                </div>
+                <div class="col-9 text-center" >
+
+                </div>
+
+        </div>
+    </div>
+
+
+        </div>#}
 
 {% endblock %}
