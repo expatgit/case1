@@ -28,11 +28,11 @@ class UserType extends AbstractType
                             'label' => 'Повтор пароля  ',
                         ),
                     ))
-            ->add('save', SubmitType::class, array(
+                        ->add('save', SubmitType::class, array(
                'label' => "Сохранить",
             ));
     }
-
+A
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([

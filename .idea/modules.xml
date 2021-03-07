@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CourseWork/.idea/CourseWork.iml" filepath="$PROJECT_DIR$/../CourseWork/.idea/CourseWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Exam-JS/.idea/Exam-JS.iml" filepath="$PROJECT_DIR$/../Exam-JS/.idea/Exam-JS.iml" />
       <module fileurl="file://$USER_HOME$/PhpstormProjects/HTML_CS/.idea/HTML_CS.iml" filepath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/HTML_CS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JSExam/.idea/JSExam.iml" filepath="$PROJECT_DIR$/../JSExam/.idea/JSExam.iml" />
       <module fileurl="file://$PROJECT_DIR$/../blog/.idea/blog-original.iml" filepath="$PROJECT_DIR$/../blog/.idea/blog-original.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/case1.iml" filepath="$PROJECT_DIR$/.idea/case1.iml" />
     </modules>

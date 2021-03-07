@@ -10,5 +10,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="blog-original" />
     <orderEntry type="module" module-name="HTML_CS" />
+    <orderEntry type="module" module-name="CourseWork" />
+    <orderEntry type="module" module-name="Exam-JS" />
+    <orderEntry type="module" module-name="JSExam" />
   </component>
 </module>

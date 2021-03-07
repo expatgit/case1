@@ -25,7 +25,7 @@ class SupremeAdminController extends AdminBaseController
         $forRender['title'] = 'Пользователи';
         $forRender['users']= $users;
         return $this->render('Admin/user/index.html.twig', $forRender);
-
+        dump($users);
     }
 
     /**
@@ -38,7 +38,7 @@ class SupremeAdminController extends AdminBaseController
     {
         $user = new User(); // создание нового объекта пользователя, шаблон нового пользователя
         $form = $this->createForm(UserType::class, $user); // создание формы, принимает на вход сущность User
-        $em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager(); //Менеджер сущностей
         $form->handleRequest($request); // обработка формы (handlerRequest, принимает на вход $request)
 
         if(($form->isSubmitted()) && ($form->isValid())) // проверка формы - на нажатие кнопки + на валидацию формы
@@ -46,6 +46,7 @@ class SupremeAdminController extends AdminBaseController
             $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
             $user->setRoles(["ROLE_ADMIN"]);
+           /* $user->setAddress($address);*/
             $em->persist($user);
             $em->flush();
 

@@ -1,4 +1,3 @@
-
 {% extends 'admin/adminorigin.html.twig' %}
 
 {% block body %}
@@ -9,7 +8,28 @@
                 <h1 class="mt-5">
                     {{ title }}  {{ app.user.username }}
                 </h1>
-                <a href="{{ path('admin_user') }}">Пользователи</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-xl">
+
+        <div class="col-12">
+            <div class="row mt-5">
+                <div class="col-3 text-center">
+                    Меню администратора
+                </div>
+                <div class="col-9 text-center" style="background-color: #0dcaf0">
+                    222
+                </div>
+            </div>
+            <div class="row mt-5 text-center">
+                <div class="col-3">
+                    <button class="btn-outline-success" type="submit" style="border-radius: 10px">
+                        <a href="{{ path('admin_user') }}">Пользователи</a>
+                    </button>
+                </div>
+
             </div>
         </div>
     </div>
