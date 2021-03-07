@@ -13,11 +13,11 @@
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                         {% endif %}
 
-                    {#    {% if app.user %}
+                        {% if app.user %}
                             <div class="mb-3">
                                 Добро пожаловать, {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
                             </div>
-                        {% endif %}#}
+                        {% endif %}
 
                         <h1 class="h3 mb-3 font-weight-normal text-center">Стой! Кто идет?</h1>
                         <label for="inputEmail"></label>

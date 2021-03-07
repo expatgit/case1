@@ -52,7 +52,7 @@ class SupremeAdminController extends AdminBaseController
             return $this->redirectToRoute('admin_user');
         }
         $forRender = parent::renderDefault();
-        $forRender['title'] = 'Форма создания пользователя';
+        $forRender['title'] = 'Добавление пользователя';
         $forRender['form'] = $form->createView();
         return $this->render('admin/user/form.html.twig', $forRender);
     }

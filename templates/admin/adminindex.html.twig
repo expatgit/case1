@@ -2,10 +2,17 @@
 {% extends 'admin/adminorigin.html.twig' %}
 
 {% block body %}
-    <a href="{{ path('app_logout') }}">Выйти</a>
-    <h1>
-        {{ title }}
-    </h1>
-    <a href="{{ path('admin_user') }}">Пользователи</a>
+
+    <div class="container-xl">
+        <div class="row no-gutters">
+            <div class="col-12 text-center">
+                <h1 class="mt-5">
+                    {{ title }}  {{ app.user.username }}
+                </h1>
+                <a href="{{ path('admin_user') }}">Пользователи</a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 

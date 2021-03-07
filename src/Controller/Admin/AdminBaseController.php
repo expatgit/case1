@@ -9,7 +9,7 @@ class AdminBaseController extends AbstractController
     public function renderDefault()
     {
         return [
-            'title' => 'Личный кабинет Администратора'
+            'title' => 'Личный кабинет'
         ];
     }
 }
