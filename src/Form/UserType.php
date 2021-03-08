@@ -32,7 +32,7 @@ class UserType extends AbstractType
                'label' => "Сохранить",
             ));
     }
-A
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([

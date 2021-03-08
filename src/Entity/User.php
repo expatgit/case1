@@ -36,20 +36,7 @@ class User implements UserInterface
 
     private $plainPassword;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $address;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $telefone;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Name;
 
 
     public function getPlainPassword()
@@ -145,39 +132,4 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function getAddress(): ?string
-    {
-        return $this->address;
-    }
-
-    public function setAddress(string $address): self
-    {
-        $this->address = $address;
-
-        return $this;
-    }
-
-    public function getTelefone(): ?int
-    {
-        return $this->telefone;
-    }
-
-    public function setTelefone(?int $telefone): self
-    {
-        $this->telefone = $telefone;
-
-        return $this;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->Name;
-    }
-
-    public function setName(string $Name): self
-    {
-        $this->Name = $Name;
-
-        return $this;
-    }
 }
