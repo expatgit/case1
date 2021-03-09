@@ -925,10 +925,10 @@
     <table id="293" parent="9" name="doctrine_migration_versions">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="294" parent="9" name="user">
+    <table id="294" parent="9" name="task">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="295" parent="9" name="user_data">
+    <table id="295" parent="9" name="user">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
     <column id="296" parent="293" name="version">
@@ -959,104 +959,83 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="294" name="email">
+    <column id="301" parent="294" name="user_id">
       <Position>2</Position>
-      <DataType>varchar(180)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="302" parent="294" name="roles">
-      <Position>3</Position>
-      <DataType>json|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="303" parent="294" name="password">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="304" parent="294" name="address">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="305" parent="294" name="telefone">
-      <Position>6</Position>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="294" name="name">
-      <Position>7</Position>
+    <column id="302" parent="294" name="title">
+      <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="307" parent="294" name="UNIQ_8D93D649E7927C74">
-      <ColNames>email</ColNames>
-      <Unique>1</Unique>
+    <column id="303" parent="294" name="text">
+      <Position>4</Position>
+      <DataType>longtext|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="294" name="created_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="294" name="update_time">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="306" parent="294" name="IDX_527EDB25A76ED395">
+      <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="308" parent="294" name="PRIMARY">
+    <key id="307" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="309" parent="294" name="UNIQ_8D93D649E7927C74">
-      <ColNames>email</ColNames>
-      <UnderlyingIndexName>UNIQ_8D93D649E7927C74</UnderlyingIndexName>
-    </key>
-    <column id="310" parent="295" name="id">
+    <foreign-key id="308" parent="294" name="FK_527EDB25A76ED395">
+      <ColNames>user_id</ColNames>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="309" parent="295" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="295" name="hotwater">
+    <column id="310" parent="295" name="email">
       <Position>2</Position>
-      <DataType>int|0s</DataType>
+      <DataType>varchar(180)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="295" name="coldwater">
+    <column id="311" parent="295" name="roles">
       <Position>3</Position>
-      <DataType>int|0s</DataType>
+      <DataType>json|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="295" name="created">
+    <column id="312" parent="295" name="password">
       <Position>4</Position>
-      <DataType>date|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="295" name="address_id">
-      <Position>5</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="315" parent="295" name="UNIQ_D772BFAAF5B7AF75">
-      <ColNames>address_id</ColNames>
+    <index id="313" parent="295" name="UNIQ_8D93D649E7927C74">
+      <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="316" parent="295" name="PRIMARY">
+    <key id="314" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="317" parent="295" name="UNIQ_D772BFAAF5B7AF75">
-      <ColNames>address_id</ColNames>
-      <UnderlyingIndexName>UNIQ_D772BFAAF5B7AF75</UnderlyingIndexName>
+    <key id="315" parent="295" name="UNIQ_8D93D649E7927C74">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>UNIQ_8D93D649E7927C74</UnderlyingIndexName>
     </key>
-    <foreign-key id="318" parent="295" name="FK_D772BFAAF5B7AF75">
-      <ColNames>address_id</ColNames>
-      <RefTableName>user</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>
