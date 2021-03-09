@@ -76,7 +76,7 @@ class Task
         return $this->created_time;
     }
 
-    public function setCheatedTime(?\DateTimeInterface $created_time): self
+    public function setCreatedTime(?\DateTimeInterface $created_time): self
     {
         $this->created_time = $created_time;
 
@@ -88,11 +88,21 @@ class Task
         return $this->update_time;
     }
 
+    public function setCreatedTimeValue()
+    {
+        $this->created_time = new \DateTime();
+    }
+
     public function setUpdateTime(?\DateTimeInterface $update_time): self
     {
         $this->update_time = $update_time;
 
         return $this;
+    }
+
+    public function setUpdateTimeValue()
+    {
+        $this->update_time = new \DateTime();
     }
 
     public function getUser(): ?User

@@ -6,12 +6,8 @@
         <div class="row no-gutters">
             <div class="col-12 text-center">
                 <h1 class="mt-5">
-                    {{ title }}<br>
-
+                    {{ title }}  {{ app.user.username }}
                 </h1>
-                <h3>
-                    Добро пожаловать, {{ app.user.username }}
-                </h3>
 
             </div>
         </div>
@@ -26,6 +22,16 @@
                     </h4>
                 </div>
                 <br><br>
+                <div class="dropdown mt-1">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Назад
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{{ path('admin_home') }}">Панель управления</a></li>
+                        <li><a class="dropdown-item" href="{{ path('index') }}">Главная страница</a></li>
+
+                    </ul>
+                </div>
                 <div class="dropdown mt-1">
                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         Пользователи
@@ -47,9 +53,15 @@
                     </ul>
                 </div>
 
-
             </div>
             <div class="col-8">
+
+                <h2>Список задач</h2>
+                <ul>
+                    {% for task_unit in task %}
+                        <li>{{ task_unit.title }} 111</li>
+                    {% endfor %}
+                </ul>
 
             </div>
         </div>
@@ -57,4 +69,3 @@
     </div>
 
 {% endblock %}
-

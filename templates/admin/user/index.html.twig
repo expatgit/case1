@@ -24,10 +24,37 @@
                    </h4>
                 </div>
                 <br><br>
-                <div>
-                    <button class="btn-outline-success" type="submit" style="border-radius: 10px">
-                        <a href="{{ path('admin_user') }}">Пользователи</a>
+                <div class="dropdown mt-1">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Назад
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{{ path('admin_home') }}">Панель управления</a></li>
+                        <li><a class="dropdown-item" href="{{ path('index') }}">Главная страница</a></li>
+
+                    </ul>
                 </div>
+                <div class="dropdown mt-1">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Пользователи
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{{ path('admin_user') }}">Список пользователей</a></li>
+                        <li><a class="dropdown-item" href="{{ path('admin_user_create') }}">Добавить пользователя</a></li>
+
+                    </ul>
+                </div>
+                <div class="dropdown mt-1">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Задачи
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{{ path('admin_task') }}">Список задач</a></li>
+                        <li><a class="dropdown-item" href="{{ path('admin_task_add') }}">Добавить задачу</a></li>
+
+                    </ul>
+                </div>
+
 
             </div>
             <div class="col-8 text-center">
