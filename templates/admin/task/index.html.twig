@@ -59,7 +59,8 @@
                 <h2>Список задач</h2>
                 <ul>
                     {% for task_unit in task %}
-                        <li>{{ task_unit.title }} 111</li>
+                        <ul><b>{{ task_unit.id }}.
+                                {{ task_unit.title }}:</b><br> {{ task_unit.text }}</ul><br>
                     {% endfor %}
                 </ul>
 

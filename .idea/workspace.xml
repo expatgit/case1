@@ -39,17 +39,17 @@
       <change afterPath="$PROJECT_DIR$/../JSExam/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JSExam/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog/.idea/blog-original.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminTaskController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/TaskType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/task/form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/task/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_5_2021_9_10_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_5_2021_9_10_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminBaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminBaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/base/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/base/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/adminindex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminindex.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user/userindex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/userindex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/task/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/task/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/user/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guest/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guest/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guest/guestindex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guest/guestindex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/HTML_CS.iml" beforeDir="false" afterPath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/HTML_CS.iml" afterDir="false" />
       <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/modules.xml" beforeDir="false" afterPath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/modules.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/PhpstormProjects/HTML_CS/.idea/shelf/Uncommitted_changes_before_Update_at_1_19_2021_8_31_PM_[Default_Changelist]/avatar.jpg" beforeDir="false" />
@@ -73,6 +73,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">

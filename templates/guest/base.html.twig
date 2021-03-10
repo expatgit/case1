@@ -52,19 +52,24 @@
         <!-- Button trigger modal -->
 
         <form>
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ path('admin_home') }}" class="btn btn-outline-secondary mb-1" type="submit">Панель администратора</a>
+            {% if is_granted('ROLE_ADMIN', 'ROLE_USER') %}
+                <a href="{{ path('admin_home') }}" class="btn btn-success mb-1" type="submit">Панель администратора</a>
+                <a href="{{ path('app_logout') }}" class="btn btn-outline-primary" type="submit">Выйти</a>
+            {% endif %}
+
+            {% if is_granted('ROLE_USER') %}
+                <a href="#" class="btn btn-secondary mb-1" type="submit">Личный кабинет</a>
                 <a href="{{ path('app_logout') }}" class="btn btn-outline-primary" type="submit">Выйти</a>
 
             {% else %}
                 <a href="{{ path('app_login') }}" class="btn btn-outline-primary mb-1" type="submit">Войти</a>
-                <!-- Button trigger modal -->
+              {#  <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                    LOGIN
-                </button>
+                </button>#}
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+               {# <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
                 ">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -80,7 +85,7 @@
                             <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
-                </div>
+                </div>#}
                 </div>
 
             {% endif %}
@@ -171,7 +176,9 @@
           <!-- Navbar content -->#}
 
 </main>
-{% block body %}{% endblock %}
+
+
+{% block body %}   {% endblock %}
 {% block javascripts %}
 
     {#{{ encore_entry_script_tags('app') }}#}
@@ -183,6 +190,26 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     {% block addJs %} {% endblock %}
 {% endblock %}
+<div class="container-xl text-center mt-3">
+    <span style="font-family: 'Arial Black'">
+         1. Нажмите "Войти" и выберите одного из пользователей:
+    admin@spb.com (админ),
+    user@spb.com (гость),
+    chapayeff@mail.ru (админ),
+    ivan@susanin.ru (гость) <br><br>
+
+    2. Пароль у всех пользователей - 123. <br><br>
+
+    3. Доступ на сайт - по ролям. Админ - имеет полный доступ. Гость - только главная страница и Личный кабинет.
+    Пока на данный момент всем пользователем при регистрации присваивается две роли - ["ROLE_ADMIN","ROLE_USER"]. Возмножно,
+    надо было оставить поле "роль" в форме.
+    Личный кабинет - гостевая часть сайта, пока не доделана. См.Панель администратора от имени любого из администраторов.
+
+
+    </span>
+
+</div>
+
 </body>
 </html>
 

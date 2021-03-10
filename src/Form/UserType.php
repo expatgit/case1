@@ -40,6 +40,7 @@ class UserType extends AbstractType
                     ))
                         ->add('save', SubmitType::class, array(
                'label' => "Сохранить",
+
             ));
     }
 
